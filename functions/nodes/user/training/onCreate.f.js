@@ -25,13 +25,21 @@ exports = module.exports = functions.database.ref('/user/{userId}/training/{trai
 function calculateNextSerie(serieData) {
 
     let finalPulse = serieData.finalPulse;    
-    let repeatsGoal = serieData.repeatsGoal;
+    let repeatsGoal = serieData.repeatsGoal; // no value
     let repeats = serieData.repeats;    
     let duration = serieData.duration;
-    let interval = serieData.interval;
+    let interval = serieData.interval; // no value
 
-    if(!finalPulse || !repeatsGoal || !repeats || !duration || !interval) {
+    if(!finalPulse || !repeats || !duration ) {
         return null
+    }
+
+    if(!repeatsGoal){
+        repeatsGoal = repeats
+    }
+
+    if(!interval) {
+        interval = duration
     }
   
     // calculate pulseScore
