@@ -75,22 +75,23 @@ function addSerie(userId, trainingId, serieId, serie) {
 let userId = 'HP7RdU33Zhhnzar5wopcXfgqMgB3';
 let trainingId = "RXZvb5hbx1ZJWEuMgp92";
 
+// create serie
 // createTraining(userId, trainingId).then( () => {
 //   console.log('training created ' + trainingId);  
 // });
 
 // add first serie
 addSerie( userId, trainingId, 'serie1', {  
-  finalPulse: 85,            
+  finalPulse: 115,            
   repeats: 15,  
   duration: 40,  
 });
 
 // add next serie
-addSerie( userId, trainingId, 'serie2', {  
-  finalPulse: 95,            
-  repeats: 16,
-  repeatsGoal: 15,  
-  duration: 40,
-  interval: 55
-});
+// addSerie( userId, trainingId, 'serie2', {  
+//   finalPulse: 95,            
+//   repeats: 16,
+//   repeatsGoal: 15,  
+//   duration: 40,
+//   interval: 55
+// });
